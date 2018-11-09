@@ -11,17 +11,18 @@ function initializePage() {
   var template = Handlebars.compile(source);
 
   var parentDiv = $("#templatedChallenges");
-  for(var game in games){
-    var challengeList = games[game];
-    for (var i=0; i<challengeList.length; i++){
-      var currData = challengeList[i];
-      currData["GameTitle"] = game;
-      var currHtml = template(currData);
-      parentDiv.append(currHtml);
-    }
-  }
 
-  for(var i=0; i<localStorage.length; i++){
+  // for(var game in games){
+  //   var challengeList = games[game];
+  //   for (var i=0; i<challengeList.length; i++){
+  //     var currData = challengeList[i];
+  //     currData["GameTitle"] = game;
+  //     var currHtml = template(currData);
+  //     parentDiv.append(currHtml);
+  //   }
+  // }
+
+  for(var i=0; i<1; i++){
     game = localStorage.key(i);
     var challengeList = JSON.parse(localStorage[game]);
     for (var j=0; j<challengeList.length; j++){
