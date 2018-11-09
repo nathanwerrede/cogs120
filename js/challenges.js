@@ -27,11 +27,11 @@ function initializePage() {
     for (var j=0; j<challengeList.length; j++){
       var currData = challengeList[j];
       if (currData["difficulty"] == "easy"){
-        currData["difficulty"] = "border-success";
+        currData["difficulty"] = "text-white bg-success";
       } else if (currData["difficulty"] == "medium"){
-        currData["difficulty"] = "border-warning";
+        currData["difficulty"] = "bg-warning";
       } else{
-        currData["difficulty"] = "border-danger";
+        currData["difficulty"] = "text-white bg-danger";
       }
       currData["GameTitle"] = game;
       var currHtml = template(currData);

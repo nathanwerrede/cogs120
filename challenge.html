@@ -72,26 +72,19 @@
   <label for="tags">Tags: </label>
   <input id="tags">
 </div>
+<script id="entry-template" type="text/x-handlebars-template">
 <h2 align = 'center'>{{ChallengeTitle}}</h2>
 
-<div class="card text-white bg-success mb-3" style="max-width: fill;">
-  <div class="card-header">Easy difficulty</div>
+
+<div class="card {{difficulty}} mb-3" style="max-width: fill;">
+  <div class="card-header">{{difficulty}} challenge</div>
   <div class="card-body">
-    <p class="card-text">Play a level of Super Mario Bros without hitting a block</p>
+    <p class="card-text">{{ChallengeDescription}}</p>
   </div>
 </div>
-<div class="card bg-warning mb-3" style="max-width: fill;">
-  <div class="card-header">Medium difficulty</div>
-  <div class="card-body">
-    <p class="card-text">Play upside down</p>
-  </div>
-</div>
-<div class="card text-white bg-danger mb-3" style="max-width: fill;">
-  <div class="card-header">Hard difficulty</div>
-  <div class="card-body">
-    <p class="card-text">Play through the fire and flames on expert</p>
-  </div>
-</div>
+
+</script>
+<div id="templatedChallenges"></div>
 
 
   <br>
