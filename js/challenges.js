@@ -12,15 +12,15 @@ function initializePage() {
 
   var parentDiv = $("#templatedChallenges");
 
-  // for(var game in games){
-  //   var challengeList = games[game];
-  //   for (var i=0; i<challengeList.length; i++){
-  //     var currData = challengeList[i];
-  //     currData["GameTitle"] = game;
-  //     var currHtml = template(currData);
-  //     parentDiv.append(currHtml);
-  //   }
-  // }
+  for(var game in games){
+    var challengeList = games[game];
+    for (var i=0; i<challengeList.length; i++){
+      var currData = challengeList[i];
+      currData["GameTitle"] = game;
+      var currHtml = template(currData);
+      parentDiv.append(currHtml);
+    }
+  }
 
   for(var i=0; i<localStorage.length; i++){
     game = localStorage.key(i);
@@ -29,12 +29,15 @@ function initializePage() {
       var currData = challengeList[j];
       if (currData["difficulty"] == "easy"){
         currData["difficulty"] = "text-white bg-success";
+        currData['diffBorder'] = "border-success";
         currData["diffName"] = 'Easy'
       } else if (currData["difficulty"] == "medium"){
         currData["difficulty"] = "bg-warning";
+        currData['diffBorder'] = "border-warning";
         currData["diffName"] = "Medium"
       } else{
         currData["difficulty"] = "text-white bg-danger";
+        currData['diffBorder'] = "border-danger";
         currData["diffName"] = "Hard"
       }
       currData["GameTitle"] = game;
