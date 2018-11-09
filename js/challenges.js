@@ -23,7 +23,7 @@ function initializePage() {
   // }
 
   for(var i=0; i<localStorage.length; i++){
-    game = localStorage.key();
+    game = localStorage.key(i);
     var challengeList = JSON.parse(localStorage[game]);
     for (var j=0; j<challengeList.length; j++){
       var currData = challengeList[j];
