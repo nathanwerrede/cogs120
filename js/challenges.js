@@ -22,8 +22,8 @@ function initializePage() {
   //   }
   // }
 
-  for(var i=0; i<1; i++){
-    game = localStorage.key(i);
+  for(var i=0; i<localStorage.length(); i++){
+    game = localStorage.key();
     var challengeList = JSON.parse(localStorage[game]);
     for (var j=0; j<challengeList.length; j++){
       var currData = challengeList[j];
