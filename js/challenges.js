@@ -29,10 +29,13 @@ function initializePage() {
       var currData = challengeList[j];
       if (currData["difficulty"] == "easy"){
         currData["difficulty"] = "text-white bg-success";
+        currData["diffName"] = 'Easy'
       } else if (currData["difficulty"] == "medium"){
         currData["difficulty"] = "bg-warning";
+        currData["diffName"] = "Medium"
       } else{
         currData["difficulty"] = "text-white bg-danger";
+        currData["diffName"] = "Hard"
       }
       currData["GameTitle"] = game;
       var currHtml = template(currData);
