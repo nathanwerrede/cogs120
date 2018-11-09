@@ -7,8 +7,7 @@ var games = {'Mario' : [{'ChallengeTitle' : 'beat the game without dying',
              'Fortnite' : [{'ChallengeTitle' : 'win without building',
                             'ChallengeDescription' : 'dont build',
                             'difficulty' : 'border-danger'}, {'ChallengeTitle':
-                          'Mining for Wins', 'ChallengeDescription':'Win a game
-                          without picking up a weapon', 'difficulty':'border-danger'}],
+                          'Mining for Wins', 'ChallengeDescription':'Win a game without picking up a weapon', 'difficulty':'border-danger'}],
               'NBA 2K19' : [{'ChallengeTitle': 'Stretch 5', 'ChallengeDescription':
                           'Make more than 5 3-pointers in a game with any center',
                           'difficulty': 'border-success'},{'ChallengeTitle': "Mercy Rule",
