@@ -3,7 +3,6 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <title>Challenger</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Challenge Zone</a>
+    <a class="navbar-brand" href="index.html">Challenge Zone</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,21 +29,27 @@
             <a class="nav-link" href="search.html">Games</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="create_challenge.html">Create Challenge</a>
+            <a class="nav-link" href="create_challenge.html">Create Challenge</a>
           </li>
       </ul>
     </div>
   </nav>
-  <a href="index.html">home</a>
-  <p>
-  this is the search page
-  </p>
 
-  <a href="game.html"> this is a game that you searched for </a>
+<div class="list-group">
+      <script id="entry-template" type="text/x-handlebars-template">
+    <a href="game.html?title={{GameTitle}}" class="list-group-item list-group-item-action">{{GameTitle}}</a>
+      </script>
+    </div>
+
+
+<div id="templatedChallenges"></div>
 
   <!-- include JavaScript near the end of the HTML file -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
+   <script src="js/handlebars-v4.0.12.js"></script>
+  <script src="js/challengeData.js"></script>
+  <script src="js/search.js"></script>
 </body>
 
 
