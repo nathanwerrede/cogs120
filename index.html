@@ -47,11 +47,10 @@
 
 <div id="My List" class="tabcontent">
   <list>
-    <h4 ><div class="challengeList" id="myChallenges"></div>
+    <div class="challengeList" id="myChallenges"></div>
     <div id="listEmpty">
       You have no challenges! Either <a href='search.html'>search for challenges</a> or <a href='create_challenge.html'>create one</a>
     </div>
-    </h4>
   </list>
 </div>
 
@@ -93,9 +92,13 @@
 </div>
   <!-- include JavaScript near the end of the HTML file -->
 
-<script id="challenge-template" type="text/x-handlebars-template">
-  <a href="challenge.html?challengeID={{GameTitle}}%{{index}}"> {{ChallengeTitle}} for {{GameTitle}} </a><br>
-</script>
+	<script id="challenge-template" type="text/x-handlebars-template">
+		<div class="card">
+		<div class="card-body">
+	  <a href="challenge.html?challengeID={{GameTitle}}%{{index}}"> {{ChallengeTitle}} for {{GameTitle}} </a><br>
+		</div>
+	</div>
+	</script>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
