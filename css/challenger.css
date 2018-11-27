@@ -80,7 +80,7 @@ body {
     border: 1px solid #ccc;
     border-top: none;
     background-color: #ccc;
-		
+		height:150px;
 	  overflow-y:scroll;
 	  width:100%;
 }
